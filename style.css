@@ -1,0 +1,49 @@
+body {
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.viewContainer {
+  padding-left: 260px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mainView {
+  position: relative;
+}
+
+
+/* nav */
+nav {
+  position: fixed;
+  width: 250px;
+  height:auto;
+  bottom:0;
+  top:0;
+  left:0;
+  right:0;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana,sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  background-color: #eee;
+  box-shadow: rgba(0, 0, 0, 0.14902) 1px 1px 1px 0px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0px;
+}
+
+nav li {
+  margin: 25px 0px;
+  color: #5c6bc0;
+  cursor: pointer;
+}
+
+nav li:hover, nav li.selected {
+  color: #336;
+} 

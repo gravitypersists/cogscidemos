@@ -1,0 +1,84 @@
+.spanTest {
+  width: 75%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.spanTest.incorrect input {
+  color: red !important;
+}
+
+.spanTest.incorrect .message {
+  visibility: visible;
+}
+
+.spanTest .message {
+  visibility: hidden;
+  display: block;
+  margin: 25px 0px;
+}
+
+.spanTest .userLevel {
+  display: inline-block;
+  color: rgba(63, 63, 141, 0);
+  font-size: 38px;
+  font-family: Tahoma;
+  font-weight: 550;
+  transition: all 400;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  line-height: 44px;
+}
+
+.spanTest.correct .userLevel {
+  color: rgba(63, 63, 141, 0.4);
+}
+
+.spanTest.incorrect .userLevel {
+  color: #fff;
+  background-color: rgba(63, 63, 141, 0.7);
+}
+
+.spanTest.correct input {
+  color: green !important;
+}
+
+.spanTest button {
+  position: absolute;
+  border: none;
+  outline: none;
+  top: 160px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  width: 300px;
+  height: 100px;
+  background-color: #ddd;
+  color: #eee;
+  font-size: 70px;
+  text-transform: uppercase;
+  font-family: Verdana;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.spanTest .mainInput {
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2) inset, 0 -1px 0 rgba(0,0,0,0.05) inset;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 60px;
+  color: #333;
+  height: 100px;
+  width: 90%;
+  margin: 50px auto 15px auto;
+}
+
+.label {
+  margin-right: 10px;
+}
+
