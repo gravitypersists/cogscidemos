@@ -2,12 +2,13 @@
 
 var SpanTest = React.createClass({
   render: function() {
+        //  cannot use "for" html attribute for labels
     return (
       <div className={"spanTest "+(this.state.incorrect?"incorrect":"")+(this.state.answeredCorrectly?"correct":"")}> 
         <input type="checkbox" onChange={this.handleNumbers} checked={this.state.useNumbers} /> 
-        <span className="label">Numbers</span>
+        <label className="label">Numbers</label>
         <input type="checkbox" onChange={this.handleAlpha} checked={this.state.useAlphabet}/>
-        <span className="label">Alphabet</span>
+        <label className="label">Alphabet</label>
         <button className={this.state.started?"hidden":""} onClick={this.start}>Start</button>
         <input type="text" value={this.state.answer} 
                 readOnly={this.state.readOnly} 
@@ -91,11 +92,12 @@ var SpanTest = React.createClass({
   },
 
   start: function() {
+    var self = this;
     this.string = this.randomString(20);
-    // this actually doesn't work too well
-    this.setState({incorrect:false, started:true, userLevel:3, answeredCorrectly:false, answer:""});
-    // must delay because dom won't update in top call for at least half a second
-    setTimeout(function(){this.cycle()}.bind(this), 1000);
+    // this state update takes a bit longer than it should :/
+    this.setState({incorrect:false, started:true, userLevel:3, answeredCorrectly:false, answer:""}, function() {
+      setTimeout(self.cycle(), 1000);
+    });
   }
 });
 
