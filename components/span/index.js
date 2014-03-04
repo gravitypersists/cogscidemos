@@ -5,10 +5,10 @@ var SpanTest = React.createClass({
         //  cannot use "for" html attribute for labels
     return (
       <div className={"spanTest "+(this.state.incorrect?"incorrect":"")+(this.state.answeredCorrectly?"correct":"")}> 
-        <input type="checkbox" onChange={this.handleNumbers} checked={this.state.useNumbers} /> 
-        <label className="label">Numbers</label>
-        <input type="checkbox" onChange={this.handleAlpha} checked={this.state.useAlphabet}/>
-        <label className="label">Alphabet</label>
+        <input id="num" type="checkbox" onChange={this.handleNumbers} checked={this.state.useNumbers} /> 
+        <label htmlFor="num" className="label">Numbers</label>
+        <input id="alph" type="checkbox" onChange={this.handleAlpha} checked={this.state.useAlphabet}/>
+        <label htmlFor="alph" className="label">Alphabet</label>
         <button className={this.state.started?"hidden":""} onClick={this.start}>Start</button>
         <input type="text" value={this.state.answer} 
                 readOnly={this.state.readOnly} 
